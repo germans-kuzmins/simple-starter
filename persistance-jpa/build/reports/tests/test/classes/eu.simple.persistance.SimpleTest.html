@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - SimpleTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>SimpleTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/eu.simple.persistance.html">eu.simple.persistance</a> &gt; SimpleTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.278s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">should start container$persistance_jpa()</td>
+<td class="success">0.278s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>10:33:47.891 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+10:33:47.906 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+10:33:47.944 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [eu.simple.persistance.SimpleTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+10:33:47.961 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [eu.simple.persistance.SimpleTest], using SpringBootContextLoader
+10:33:47.966 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [eu.simple.persistance.SimpleTest]: class path resource [eu/simple/persistance/SimpleTest-context.xml] does not exist
+10:33:47.967 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [eu.simple.persistance.SimpleTest]: class path resource [eu/simple/persistance/SimpleTestContext.groovy] does not exist
+10:33:47.967 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [eu.simple.persistance.SimpleTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:33:47.968 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [eu.simple.persistance.SimpleTest]: SimpleTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:33:48.102 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\Documents\Projects\mine\starter\persistance-jpa\build\classes\kotlin\test\eu\simple\persistance\SimpleTest.class]
+10:33:48.114 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration eu.simple.persistance.SimpleTest for test class eu.simple.persistance.SimpleTest
+10:33:48.231 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [eu.simple.persistance.SimpleTest]: using defaults.
+10:33:48.232 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+10:33:48.243 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+10:33:48.256 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@59fe0d5e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@76398c80, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@30b247f1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@16627366, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3fdf1809, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@538cefe, org.springframework.test.context.event.EventPublishingTestExecutionListener@27179c67, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@22eb22a0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@653369a4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@263f04c2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3d5040c6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@46d59bee]
+10:33:48.262 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@39b1aa18 testClass = SimpleTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@685492dc testClass = SimpleTest, locations = '{}', classes = '{class eu.simple.persistance.SimpleTest}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@764f226b, [ImportsContextCustomizer@7be21de6 key = [@org.springframework.stereotype.Indexed(), @org.springframework.boot.autoconfigure.AutoConfigurationPackage(), @org.springframework.test.context.BootstrapWith(value=org.springframework.boot.test.context.SpringBootTestContextBootstrapper.class), @org.junit.jupiter.api.extension.ExtendWith(value={org.springframework.test.context.junit.jupiter.SpringExtension.class}), @org.springframework.boot.autoconfigure.EnableAutoConfiguration(excludeName={}, exclude={}), @org.springframework.context.annotation.Import(value={org.springframework.boot.autoconfigure.AutoConfigurationPackages$Registrar.class}), @org.springframework.context.annotation.Import(value={org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.class}), @org.springframework.test.context.ActiveProfiles(profiles={}, resolver=org.springframework.test.context.ActiveProfilesResolver.class, value={&quot;test&quot;}, inheritProfiles=true), @org.springframework.boot.test.context.TestConfiguration(value=&quot;&quot;, proxyBeanMethods=true), @org.springframework.context.annotation.Configuration(value=&quot;&quot;, proxyBeanMethods=true), @org.springframework.boot.test.context.SpringBootTest(args={}, webEnvironment=MOCK, value={}, properties={}, classes={}), @org.springframework.stereotype.Component(value=&quot;&quot;), @org.springframework.boot.test.context.TestComponent(value=&quot;&quot;), @org.springframework.context.annotation.Import(value={eu.simple.persistance.PersistanceModuleConfig.class}), @org.apiguardian.api.API(consumers={&quot;*&quot;}, since=&quot;5.0&quot;, status=STABLE), @org.springframework.boot.SpringBootConfiguration(proxyBeanMethods=true)]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7a61c5ef, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@63c566cb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@26decc43], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+10:33:48.275 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@39b1aa18 testClass = SimpleTest, testInstance = eu.simple.persistance.SimpleTest@7a703f27, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@685492dc testClass = SimpleTest, locations = '{}', classes = '{class eu.simple.persistance.SimpleTest}', contextInitializerClasses = '[]', activeProfiles = '{test}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@764f226b, [ImportsContextCustomizer@7be21de6 key = [@org.springframework.stereotype.Indexed(), @org.springframework.boot.autoconfigure.AutoConfigurationPackage(), @org.springframework.test.context.BootstrapWith(value=org.springframework.boot.test.context.SpringBootTestContextBootstrapper.class), @org.junit.jupiter.api.extension.ExtendWith(value={org.springframework.test.context.junit.jupiter.SpringExtension.class}), @org.springframework.boot.autoconfigure.EnableAutoConfiguration(excludeName={}, exclude={}), @org.springframework.context.annotation.Import(value={org.springframework.boot.autoconfigure.AutoConfigurationPackages$Registrar.class}), @org.springframework.context.annotation.Import(value={org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.class}), @org.springframework.test.context.ActiveProfiles(profiles={}, resolver=org.springframework.test.context.ActiveProfilesResolver.class, value={&quot;test&quot;}, inheritProfiles=true), @org.springframework.boot.test.context.TestConfiguration(value=&quot;&quot;, proxyBeanMethods=true), @org.springframework.context.annotation.Configuration(value=&quot;&quot;, proxyBeanMethods=true), @org.springframework.boot.test.context.SpringBootTest(args={}, webEnvironment=MOCK, value={}, properties={}, classes={}), @org.springframework.stereotype.Component(value=&quot;&quot;), @org.springframework.boot.test.context.TestComponent(value=&quot;&quot;), @org.springframework.context.annotation.Import(value={eu.simple.persistance.PersistanceModuleConfig.class}), @org.apiguardian.api.API(consumers={&quot;*&quot;}, since=&quot;5.0&quot;, status=STABLE), @org.springframework.boot.SpringBootConfiguration(proxyBeanMethods=true)]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7a61c5ef, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@63c566cb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@26decc43], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+10:33:48.305 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-11 10:33:48.635  INFO 19020 --- [    Test worker] eu.simple.persistance.SimpleTest         : Starting SimpleTest on LAPTOP-5C0R2SIT with PID 19020 (started by 37122 in D:\Documents\Projects\mine\starter\persistance-jpa)
+2020-04-11 10:33:48.636  INFO 19020 --- [    Test worker] eu.simple.persistance.SimpleTest         : The following profiles are active: test
+2020-04-11 10:33:49.062  INFO 19020 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-11 10:33:49.098  INFO 19020 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 0 JPA repository interfaces.
+2020-04-11 10:33:49.857  INFO 19020 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-11 10:33:49.966  INFO 19020 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.12.Final
+2020-04-11 10:33:50.174  INFO 19020 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-11 10:33:50.303  INFO 19020 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-04-11 10:33:50.383  INFO 19020 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Loaded org.testcontainers.dockerclient.EnvironmentAndSystemPropertyClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2020-04-11 10:33:51.203  INFO 19020 --- [    Test worker] tAndSystemPropertyClientProviderStrategy : Found docker client settings from environment
+2020-04-11 10:33:51.203  INFO 19020 --- [    Test worker] o.t.d.DockerClientProviderStrategy       : Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=tcp://192.168.99.100:2376
+2020-04-11 10:33:51.316  INFO 19020 --- [    Test worker] org.testcontainers.DockerClientFactory   : Docker host IP address is 192.168.99.100
+2020-04-11 10:33:51.338  INFO 19020 --- [    Test worker] org.testcontainers.DockerClientFactory   : Connected to docker: 
+  Server Version: 19.03.5
+  API Version: 1.40
+  Operating System: Boot2Docker 19.03.5 (TCL 10.1)
+  Total Memory: 989 MB
+2020-04-11 10:33:51.358  WARN 19020 --- [    Test worker] o.t.utility.RegistryAuthLocator          : Failure when attempting to lookup auth config (dockerImageName: quay.io/testcontainers/ryuk:0.2.3, configFile: C:\Users\37122\.docker\config.json. Falling back to docker-java default behaviour. Exception message: C:\Users\37122\.docker\config.json (Не удается найти указанный файл)
+2020-04-11 10:33:51.627  INFO 19020 --- [    Test worker] org.testcontainers.DockerClientFactory   : Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2020-04-11 10:33:51.628  INFO 19020 --- [    Test worker] org.testcontainers.DockerClientFactory   : Checking the system...
+2020-04-11 10:33:51.628  INFO 19020 --- [    Test worker] org.testcontainers.DockerClientFactory   : ?? Docker server version should be at least 1.6.0
+2020-04-11 10:33:51.704  INFO 19020 --- [    Test worker] org.testcontainers.DockerClientFactory   : ?? Docker environment should have more than 2GB free disk space
+2020-04-11 10:33:51.765  INFO 19020 --- [    Test worker] docker[postgres:latest]                  : Creating container for image: postgres:latest
+2020-04-11 10:33:51.765  WARN 19020 --- [    Test worker] o.t.utility.RegistryAuthLocator          : Failure when attempting to lookup auth config (dockerImageName: postgres:latest, configFile: C:\Users\37122\.docker\config.json. Falling back to docker-java default behaviour. Exception message: C:\Users\37122\.docker\config.json (Не удается найти указанный файл)
+2020-04-11 10:33:51.792  INFO 19020 --- [    Test worker] docker[postgres:latest]                  : Starting container with ID: d1e54242d2f656c4b4b9e489a6286d2b3797c2009dbd27ab07056d7ba55e1519
+2020-04-11 10:33:51.930  INFO 19020 --- [    Test worker] docker[postgres:latest]                  : Container postgres:latest is starting: d1e54242d2f656c4b4b9e489a6286d2b3797c2009dbd27ab07056d7ba55e1519
+2020-04-11 10:33:52.835  INFO 19020 --- [    Test worker] docker[postgres:latest]                  : Container postgres:latest started in PT2.4725619S
+2020-04-11 10:33:52.956  INFO 19020 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-04-11 10:33:52.975  INFO 19020 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2020-04-11 10:33:53.043  INFO 19020 --- [    Test worker] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2020-04-11 10:33:53.369  INFO 19020 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-11 10:33:53.377  INFO 19020 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-11 10:33:53.630  INFO 19020 --- [    Test worker] eu.simple.persistance.SimpleTest         : Started SimpleTest in 5.324 seconds (JVM running for 6.971)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.3</a> at 11 апр. 2020 г., 10:33:54</p>
+</div>
+</div>
+</body>
+</html>

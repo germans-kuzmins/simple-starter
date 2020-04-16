@@ -1,0 +1,26 @@
+build:
+  maxIssues: 0
+
+formatting:
+  ParameterListWrapping:
+    active: false
+  NoConsecutiveBlankLines:
+    active: false
+  FinalNewline:
+    active: false
+  NoWildcardImports:
+   active: false
+
+style:
+  NewLineAtEndOfFile:
+    active: false
+  MagicNumber:
+    ignoreNumbers: '-1,0,1,2,100'
+  ForbiddenComment:
+    allowedPatterns: "(fixme|FIXME):"
+
+console-reports:
+  active: true
+  exclude:
+    - 'ProjectStatisticsReport'
+    - 'ComplexityReport'

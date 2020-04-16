@@ -1,0 +1,9 @@
+--input
+D:\Documents\Projects\mine\starter\persistance-jpa\src\main\kotlin\eu\simple\persistance\PersistanceModuleConfig.kt
+--config
+D:\Documents\Projects\mine\starter\detekt.yml
+--report
+xml:D:\Documents\Projects\mine\starter\persistance-jpa\build\reports\detekt\detekt.xml
+--report
+html:D:\Documents\Projects\mine\starter\persistance-jpa\build\reports\detekt\detekt.html
+--build-upon-default-config
