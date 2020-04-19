@@ -5,6 +5,7 @@ import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
+import javax.persistence.Entity
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
 import javax.persistence.Table
@@ -24,10 +25,10 @@ class DatabaseCleanupService(
 		val metaModel: Metamodel = entityManager.metamodel
 		tableNames = metaModel.managedTypes
 			.filter {
-				it.javaType.kotlin.findAnnotation<Table>() != null
+				it.javaType.kotlin.findAnnotation<Entity>() != null
 			}
 			.map {
-				val tableAnnotation: Table? = it.javaType.kotlin.findAnnotation()
+				val tableAnnotation: Entity? = it.javaType.kotlin.findAnnotation()
 				tableAnnotation?.name ?: throw IllegalStateException("Class has no name!")
 			}
 	}

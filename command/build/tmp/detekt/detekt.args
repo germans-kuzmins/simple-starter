@@ -1,9 +1,0 @@
---input
-D:\Documents\Projects\mine\starter\common\src\main\kotlin\eu\simple\core\common\api\Command.kt,D:\Documents\Projects\mine\starter\common\src\main\kotlin\eu\simple\core\common\api\CommandService.kt,D:\Documents\Projects\mine\starter\common\src\main\kotlin\eu\simple\core\common\CommonModuleConfig.kt,D:\Documents\Projects\mine\starter\common\src\main\kotlin\eu\simple\core\common\ModuleConfiguration.kt,D:\Documents\Projects\mine\starter\common\src\main\kotlin\eu\simple\core\common\SpringCommandService.kt
---config
-D:\Documents\Projects\mine\starter\detekt.yml
---report
-xml:D:\Documents\Projects\mine\starter\common\build\reports\detekt\detekt.xml
---report
-html:D:\Documents\Projects\mine\starter\common\build\reports\detekt\detekt.html
---build-upon-default-config

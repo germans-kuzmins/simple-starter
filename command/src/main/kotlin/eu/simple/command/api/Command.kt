@@ -5,14 +5,14 @@ import java.io.Serializable
 
 internal lateinit var STATIC_COMMAND_SERVICE: CommandService
 
-interface Command<T> : Serializable
+interface Command<R> : Serializable
 
-fun <T> Command<T>.execute(): T {
+fun <R> Command<R>.execute(): R {
     return STATIC_COMMAND_SERVICE.execute(this)
 }
 
-interface CommandHandler<C : Command<T>, T> {
-    fun execute(command: C) : T
+interface CommandHandler<C : Command<R>, R> {
+    fun execute(command: C) : R
 }
 
 @Configuration
