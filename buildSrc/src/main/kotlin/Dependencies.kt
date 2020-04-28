@@ -64,5 +64,9 @@ object Deps {
 		const val postgresql = "org.testcontainers:postgresql:${Versions.testContainers}"
 	}
 
+	object Liquibase {
+		val core = "org.liquibase:liquibase-core"
+	}
+
 	const val findBugs = "com.google.code.findbugs:annotations:${Versions.findBugs}"
 }

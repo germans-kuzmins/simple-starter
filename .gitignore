@@ -116,6 +116,7 @@ hs_err_pid*
 
 ### Gradle ###
 .gradle
+.gradle/**
 build/
 
 # Ignore Gradle GUI config
@@ -132,6 +133,6 @@ gradle-app.setting
 
 ### Gradle Patch ###
 **/build/
-/buildSrc/build/**
+**/buildSrc/build/**
 
 # End of https://www.gitignore.io/api/gradle,kotlin,intellij

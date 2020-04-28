@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <include file="classpath:db/changelog/persistance-master.xml"/>
+
+    <changeSet id="1587891043943" author="germans.kuzmins">
+        <createSequence incrementBy="5" sequenceName="test_entity_seq" startValue="1"/>
+
+        <createTable tableName="test_entity">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="entity_created" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="entity_updated" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="entity_version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="string_property" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

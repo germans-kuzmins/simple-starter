@@ -3,7 +3,6 @@ package eu.simple.command
 import eu.simple.command.api.Command
 import eu.simple.command.api.CommandHandler
 import eu.simple.command.api.execute
-import io.kotlintest.should
 import io.kotlintest.shouldBe
 import io.kotlintest.shouldThrow
 import org.junit.jupiter.api.Test
@@ -21,7 +20,7 @@ import org.springframework.test.context.ActiveProfiles
 @TestConfiguration
 @SpringBootConfiguration
 @EnableAutoConfiguration
-@Import(CommonModuleConfig::class)
+@Import(CommandModuleConfig::class)
 class SpringCommandServiceTest {
 
     @Test
