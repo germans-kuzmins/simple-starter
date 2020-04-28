@@ -54,6 +54,8 @@ class SimpleEntityTest {
         val updatedEntity = TransactionSupport.inTransaction {
             val entityInDb = testRepo.getOne(savedEntity.savedId)
             entityInDb.stringProperty = "updatedProperty"
+            entityInDb.jsonProperty["stringProp"] = "someProp"
+            entityInDb.jsonbProperty["intProp"] = 234
             entityInDb
         }
 
@@ -62,5 +64,7 @@ class SimpleEntityTest {
         updatedEntity.entityVersion shouldBe 1
         updatedEntity.created shouldBe savedEntity.created
         updatedEntity.updated shouldNotBe savedEntity.updated
+        updatedEntity.jsonProperty["stringProp"] shouldBe "someProp"
+        updatedEntity.jsonbProperty["intProp"] shouldBe 234
     }
 }

@@ -4,6 +4,7 @@ object Versions {
 	const val findBugs = "3.0.1"
 	const val kotlinTest = "3.4.2"
 	const val testContainers = "1.13.0"
+	const val jacksonVersion = "2.10.0"
 }
 
 object Deps {
@@ -48,10 +49,10 @@ object Deps {
 	}
 
 	object Jackson {
-		const val kotlinModule = "com.fasterxml.jackson.module:jackson-module-kotlin"
-		const val jaxbModule = "com.fasterxml.jackson.module:jackson-module-jaxb-annotations"
+		const val kotlinModule = "com.fasterxml.jackson.module:jackson-module-kotlin:${Versions.jacksonVersion}"
+		const val jaxbModule = "com.fasterxml.jackson.module:jackson-module-jaxb-annotations:${Versions.jacksonVersion}"
 		fun dataType(dataType: String) =
-			"com.fasterxml.jackson.datatype:jackson-datatype-$dataType"
+			"com.fasterxml.jackson.datatype:jackson-datatype-$dataType:${Versions.jacksonVersion}"
 	}
 
 	object KotlinLogging {

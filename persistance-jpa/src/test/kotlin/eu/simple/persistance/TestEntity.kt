@@ -1,6 +1,8 @@
 package eu.simple.persistance
 
 import eu.simple.persistance.api.BaseEntity
+import eu.simple.persistance.api.JpaType
+import org.hibernate.annotations.Type
 import javax.persistence.*
 
 @Entity
@@ -12,7 +14,15 @@ import javax.persistence.*
 )
 class TestEntity(
     @Column(name = "string_property")
-    var stringProperty: String
+    var stringProperty: String,
+
+    @Column(name = "json_property", columnDefinition=JpaType.JSONB)
+    @Type(type = JpaType.JSON)
+    val jsonProperty: MutableMap<String, Any> = mutableMapOf(),
+
+    @Column(name = "jsonb_property", columnDefinition=JpaType.JSONB)
+    @Type(type = JpaType.JSONB)
+    val jsonbProperty: MutableMap<String, Any> = mutableMapOf()
 ) : BaseEntity<Long>() {
 
     @Id

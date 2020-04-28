@@ -2,6 +2,8 @@ package eu.simple.persistance.api
 
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType
 import eu.simple.persistance.AuditRevisionListener
+import eu.simple.persistance.api.JpaType.JSON
+import eu.simple.persistance.api.JpaType.JSONB
 import org.hibernate.annotations.OptimisticLock
 import org.hibernate.annotations.TypeDef
 import org.hibernate.annotations.TypeDefs
@@ -15,7 +17,8 @@ private const val STATIC_HASHCODE: Int = 31
 
 @MappedSuperclass
 @TypeDefs(
-    TypeDef(name = "json", typeClass = JsonBinaryType::class)
+    TypeDef(name = JSON, typeClass = JsonBinaryType::class),
+    TypeDef(name = JSONB, typeClass = JsonBinaryType::class)
 )
 @RevisionEntity(AuditRevisionListener::class)
 abstract class BaseEntity<ID : Serializable> {

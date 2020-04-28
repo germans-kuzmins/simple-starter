@@ -26,6 +26,12 @@
             <column name="string_property" type="VARCHAR">
                 <constraints nullable="false"/>
             </column>
+            <column name="json_property" type="json">
+                <constraints nullable="false"/>
+            </column>
+            <column name="jsonb_property" type="jsonb">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
 </databaseChangeLog>

@@ -9,8 +9,9 @@ spring:
       ddl-auto: validate
     database-platform: org.hibernate.dialect.PostgreSQL95Dialect
   datasource:
-    url: jdbc:tc:postgresql:latest:///databasename
-    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:postgresql://192.168.99.100:5432/postgres
+    username: postgres
+    password: mysecretpassword
   liquibase:
     enabled: true
     change-log: classpath:db/changelog/persistance-master-test.xml
