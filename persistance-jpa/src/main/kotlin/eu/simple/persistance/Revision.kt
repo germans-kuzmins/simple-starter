@@ -3,7 +3,13 @@ package eu.simple.persistance
 import org.hibernate.envers.RevisionNumber
 import org.hibernate.envers.RevisionTimestamp
 import java.time.Instant
-import javax.persistence.*
+import javax.persistence.Column
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import javax.persistence.Id
+import javax.persistence.SequenceGenerator
+import javax.persistence.Table
 
 @Entity
 @SequenceGenerator(name = "Revision_seq_gen", sequenceName = "revision_seq")

@@ -11,7 +11,11 @@ import org.hibernate.envers.RevisionEntity
 import org.springframework.data.util.ProxyUtils
 import java.io.Serializable
 import java.time.Instant
-import javax.persistence.*
+import javax.persistence.Column
+import javax.persistence.MappedSuperclass
+import javax.persistence.PreUpdate
+import javax.persistence.Transient
+import javax.persistence.Version
 
 private const val STATIC_HASHCODE: Int = 31
 
