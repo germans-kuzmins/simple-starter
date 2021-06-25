@@ -3,8 +3,9 @@ package eu.simple.command
 import eu.simple.command.api.Command
 import eu.simple.command.api.CommandHandler
 import eu.simple.command.api.execute
-import io.kotlintest.shouldBe
-import io.kotlintest.shouldThrow
+import io.kotest.assertions.throwables.shouldThrow
+import io.kotest.matchers.shouldBe
+import io.kotest.matchers.string.shouldStartWith
 import org.junit.jupiter.api.Test
 import org.springframework.boot.SpringBootConfiguration
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
@@ -48,6 +49,8 @@ class SpringCommandServiceTest {
         // When: command executed Then: exception is thrown
         shouldThrow<IllegalStateException> {
             command.execute()
+        }.also {
+            it.message shouldBe "More than one handler found for command: class eu.simple.command.BadCommand"
         }
     }
 
@@ -59,6 +62,8 @@ class SpringCommandServiceTest {
         // When: command executed Then: exception is thrown
         shouldThrow<IllegalStateException> {
             command.execute()
+        }.also {
+            it.message shouldStartWith  "More than one handler found for command:"
         }
     }
 
@@ -70,6 +75,8 @@ class SpringCommandServiceTest {
         // When: command executed Then: exception is thrown
         shouldThrow<IllegalStateException> {
             command.execute()
+        }.also {
+            it.message shouldBe "Can not find handler for command : class eu.simple.command.CommandWithoutHandler"
         }
     }
 }

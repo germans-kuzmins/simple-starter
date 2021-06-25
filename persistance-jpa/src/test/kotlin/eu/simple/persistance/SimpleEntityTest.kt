@@ -1,8 +1,8 @@
 package eu.simple.persistance
 
 import eu.simple.persistance.api.TransactionSupport
-import io.kotlintest.shouldBe
-import io.kotlintest.shouldNotBe
+import io.kotest.matchers.shouldBe
+import io.kotest.matchers.shouldNotBe
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.SpringBootConfiguration
@@ -34,7 +34,7 @@ class SimpleEntityTest {
         }
 
         // Then:
-        val savedEntity = testRepo.getOne(savedId)
+        val savedEntity = testRepo.getById(savedId)
         savedEntity.savedId shouldNotBe null
         savedEntity.stringProperty shouldBe "property"
         savedEntity.entityVersion shouldBe 0
@@ -48,11 +48,11 @@ class SimpleEntityTest {
         val savedId = TransactionSupport.inTransaction {
             testRepo.save(TestEntity("property")).savedId
         }
-        val savedEntity = testRepo.getOne(savedId)
+        val savedEntity = testRepo.getById(savedId)
 
         // When:
         val updatedEntity = TransactionSupport.inTransaction {
-            val entityInDb = testRepo.getOne(savedEntity.savedId)
+            val entityInDb = testRepo.getById(savedEntity.savedId)
             entityInDb.stringProperty = "updatedProperty"
             entityInDb.jsonProperty["stringProp"] = "someProp"
             entityInDb.jsonbProperty["intProp"] = 234

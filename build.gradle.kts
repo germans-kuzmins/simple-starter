@@ -9,11 +9,11 @@ allprojects {
 }
 
 plugins {
-	id("org.springframework.boot") version "2.2.6.RELEASE" apply false
-	id("io.gitlab.arturbosch.detekt") version "1.3.0" apply false
-	kotlin("jvm") version "1.3.71" apply false
-	kotlin("plugin.spring") version "1.3.71" apply false
-	kotlin("plugin.jpa") version "1.3.71" apply false
+	id("org.springframework.boot") version "2.5.2" apply false
+	id("io.gitlab.arturbosch.detekt") version "1.17.1" apply false
+	kotlin("jvm") version "1.5.20" apply false
+	kotlin("plugin.spring") version "1.5.20" apply false
+	kotlin("plugin.jpa") version "1.5.20" apply false
 	id("org.liquibase.gradle") version "2.0.1" apply false
 }
 
@@ -44,26 +44,28 @@ subprojects {
 		val compileOnly by configurations
 		val testRuntimeOnly by configurations
 
-		implementation(Deps.KotlinLogging.logging)
-		implementation(Deps.Kotlin.stdlib)
-		implementation(Deps.Kotlin.reflect)
+		implementation("io.github.microutils:kotlin-logging:1.7.6")
+		implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+		implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+		implementation("com.fasterxml.jackson.module:jackson-module-jaxb-annotations")
+		implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+		implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
 
 		kapt(platform(SpringBootPlugin.BOM_COORDINATES))
 		implementation(platform(SpringBootPlugin.BOM_COORDINATES))
-		kapt(Deps.SpringBoot("configuration-processor"))
-		implementation(Deps.SpringBoot.core)
-		runtimeOnly(Deps.SpringBoot("devtools"))
+		kapt("org.springframework.boot:spring-boot-configuration-processor")
+		implementation("org.springframework.boot:spring-boot")
+		runtimeOnly("org.springframework.boot:spring-boot-devtools")
 
-		testImplementation(Deps.SpringBoot.starter("test")) {
-			exclude(group = "org.junit.vintage")
-		}
-		testImplementation(Deps.Kotlin.testJunit5)
-		testImplementation(Deps.Kotlin.mockk)
-		testImplementation(Deps.Kotlin.kotlintestAssertions)
-		testImplementation(Deps.JunitJupiter.api)
-		testImplementation(Deps.JunitJupiter.params)
-		testRuntimeOnly(Deps.JunitJupiter.engine)
-		compileOnly(Deps.findBugs)
+		testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+		testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
+		testImplementation("io.mockk:mockk:1.11.0")
+		testImplementation("io.kotest:kotest-assertions-core:4.6.0")
+		testImplementation(platform("org.junit:junit-bom:5.7.2"))
+		testImplementation("org.junit.jupiter:junit-jupiter")
+		compileOnly("com.google.code.findbugs:annotations:3.0.1")
 	}
 
 	tasks {
@@ -72,6 +74,9 @@ subprojects {
 		}
 		withType<Test> {
 			useJUnitPlatform()
+			testLogging {
+				events("passed", "skipped", "failed")
+			}
 		}
 		withType<KotlinCompile> {
 			kotlinOptions {
